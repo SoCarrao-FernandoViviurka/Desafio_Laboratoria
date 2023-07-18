@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+:root{
+  font-size: 62.5%;
+  --button-color: #D9611E;
+}
+
+body {
+  background-color: #cdf0ee;
+  font-size: 1.6rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

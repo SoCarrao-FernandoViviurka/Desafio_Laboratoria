@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "../data/data.json";
-import { ButtonCurrentPage, Card, ContainerButtonCurrentPage, ContainerCards, InfoCar } from "./Cards.styled";
+import { ButtonCurrentPage, Card, ContainerButtonCurrentPage, ContainerCards, InfoCar, Modelo } from "./Cards.styled";
 
 const Cards = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -44,10 +44,11 @@ const Cards = () => {
               <>
                 <img src={item.veiculo_foto[0]} alt="" />
               </>
-              <InfoCar>
-              
+              <InfoCar>              
                 <h1>{item.veiculo_marca}</h1>
-                <p>{item.veiculo_modelo}</p>
+                <Modelo>
+                  <p>{item.veiculo_modelo}</p>
+                </Modelo>
                 <p>{item.veiculo_cambio}</p>
                 <p>{item.ano_modelo}</p>
                 <h4>                  

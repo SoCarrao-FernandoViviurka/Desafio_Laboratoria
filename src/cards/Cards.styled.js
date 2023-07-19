@@ -7,20 +7,21 @@ export const ContainerCards = styled.section`
   flex-wrap: ${(props) => (props.vertical ? "nowrap" : "wrap")};
   align-items: center;
   background-color: blue;
-  gap: .1rem;
-  margin: .2rem;
+  gap: 0.1rem;
+  margin: 0.2rem;
 `;
 
 export const Card = styled.section`
   width: ${(props) => (props.vertical ? "60rem" : "30rem")};
   height: ${(props) => (props.vertical ? "20rem" : "40rem")};
   flex-direction: ${(props) => (props.vertical ? "row" : "column")};
+  justify-content: space-between;
   align-items: center;
   background-color: var(--yellow);
   border-radius: 10px;
   display: flex;
   font-size: 1rem;
-  padding: .2rem;
+  padding: 0.2rem;
   margin-bottom: 1rem;
 
   img {
@@ -29,41 +30,41 @@ export const Card = styled.section`
   }
 
   @media (max-width: 380px) {
-	width: ${(props) => (props.vertical ? "19rem" : "15rem")};
-  height: ${(props) => (props.vertical ? "13rem" : "20rem")};
+    width: ${(props) => (props.vertical ? "19rem" : "15rem")};
+    height: ${(props) => (props.vertical ? "13rem" : "20rem")};
 
-	font-size: .8rem;
-	img {
+    font-size: 0.8rem;
+    img {
       width: 150px;
     }
   }
 
   @media (min-width: 380px) and (max-width: 400px) {
-	width: ${(props) => (props.vertical ? "20rem" : "13rem")};
-  height: ${(props) => (props.vertical ? "13rem" : "20rem")};
-  
-  font-size: .9rem;
-	img {
+    width: ${(props) => (props.vertical ? "20rem" : "13rem")};
+    height: ${(props) => (props.vertical ? "13rem" : "20rem")};
+
+    font-size: 0.9rem;
+    img {
       width: 150px;
     }
   }
 
   @media (min-width: 400px) and (max-width: 450px) {
-	width: ${(props) => (props.vertical ? "22rem" : "12rem")};
-  height: ${(props) => (props.vertical ? "12rem" : "22rem")};
-  
-  font-size: .9rem;
-	img {
+    width: ${(props) => (props.vertical ? "22rem" : "12rem")};
+    height: ${(props) => (props.vertical ? "12rem" : "22rem")};
+
+    font-size: 0.9rem;
+    img {
       width: 150px;
     }
   }
 
   @media (min-width: 450px) and (max-width: 500px) {
-	width: ${(props) => (props.vertical ? "23rem" : "13rem")};
-  height: ${(props) => (props.vertical ? "13rem" : "23rem")};
-  
-  font-size: .9rem;
-	img {
+    width: ${(props) => (props.vertical ? "23rem" : "13rem")};
+    height: ${(props) => (props.vertical ? "13rem" : "23rem")};
+
+    font-size: 0.9rem;
+    img {
       width: 150px;
     }
   }
@@ -77,20 +78,32 @@ export const InfoCar = styled.section`
   line-height: 1.5rem;
   padding: 0.1rem;
   text-align: center;
-`;
+  max-width: 40vw;
+ `;
 
 export const ContainerButtonCurrentPage = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-gap: .5rem;
-padding: 1rem;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+`;
 
-export const ButtonCurrentPage = styled.button `
-width: 1.2rem;
-height: 1%.2rem;
-font-weight: bold;
-padding: .3rem;
+export const ButtonCurrentPage = styled.button`
+  width: 1.2rem;
+  height: 1%.2rem;
+  font-weight: bold;
+  padding: 0.3rem;
+`;
 
-`
+export const Modelo = styled.div`
+ width: 40vw;
+
+p{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+ 
+`;

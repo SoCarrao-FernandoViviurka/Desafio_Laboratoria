@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: red;
+      background-color: var(--black);
       
     }
 
@@ -26,7 +26,10 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border-radius: 10px;
     text-transform: uppercase;
-    border: none;   
+    border: none;  
+    padding: .4rem; 
+    color: var(--white);
+    background-color: var(--blue);
   }
 
   input, select{
@@ -36,6 +39,9 @@ export const GlobalStyle = createGlobalStyle`
 
   :root{
     --yellow: #ffff01;
+    --blue: #054F77;
+    --white: #fff;
+    --black: #131819;
     
   }
  `;

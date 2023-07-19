@@ -1,11 +1,12 @@
 import { useState } from "react";
 import data from "../data/data.json";
-import { ButtonCurrentPage, Card, ContainerButtonCurrentPage, ContainerCards, InfoCar, Modelo } from "./Cards.styled";
+import { ButtonCurrentPage, CarModelName, Card, ContactsButton, ContainerButtonCurrentPage, ContainerCards, FinancingButton, InfoCar } from "./Cards.styled";
 
 const Cards = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [cardsPerPage, setCardsPerPage] = useState(6);
   const [options] = useState([6, 10, 20, 30, 50]);
+  
   const [verticalLayout, setVerticalLayout] = useState(false);
 
 
@@ -46,9 +47,9 @@ const Cards = () => {
               </>
               <InfoCar>              
                 <h1>{item.veiculo_marca}</h1>
-                <Modelo>
+                <CarModelName>
                   <p>{item.veiculo_modelo}</p>
-                </Modelo>
+                </CarModelName>
                 <p>{item.veiculo_cambio}</p>
                 <p>{item.ano_modelo}</p>
                 <h4>                  
@@ -57,8 +58,8 @@ const Cards = () => {
                 <p>{item.veiculo_km} Km</p>
 
                 <div>
-              <button>Financiamento</button>
-              <button>Contatos</button>
+              <FinancingButton>Financiamento</FinancingButton>
+              <ContactsButton>Contatos</ContactsButton>
               </div>
               </InfoCar>
               

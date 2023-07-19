@@ -1,11 +1,11 @@
-import Cards from '../src/cards/Cards'
+import  Router  from "./Router";
 
 function App() {
-   return (
+  return (
     <>
-      <Cards />
+      <Router />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

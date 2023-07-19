@@ -1,15 +1,24 @@
 import { useState } from "react";
-import data from "../data/data.json";
-import { ButtonCurrentPage, CarModelName, Card, ContactsButton, ContainerButtonCurrentPage, ContainerCards, FinancingButton, InfoCar } from "./Cards.styled";
+import data from "../../data/data.json";
+import {
+  ButtonCurrentPage,
+  CarModelName,
+  Card,
+  ContactsButton,
+  ContainerButtonCurrentPage,
+  ContainerCards,
+  FinancingButton,
+  InfoCar,
+} from "./Cards.styled";
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const Cards = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [cardsPerPage, setCardsPerPage] = useState(6);
   const [options] = useState([6, 10, 20, 30, 50]);
-  
+
   const [verticalLayout, setVerticalLayout] = useState(false);
-
-
 
   const toggleLayout = () => {
     setVerticalLayout(!verticalLayout);
@@ -27,6 +36,7 @@ const Cards = () => {
 
   return (
     <div>
+      <Header />
       <label>
         <span></span>
         <select value={cardsPerPage} onChange={handleCardsPerPageChange}>
@@ -45,29 +55,33 @@ const Cards = () => {
               <>
                 <img src={item.veiculo_foto[0]} alt="" />
               </>
-              <InfoCar>              
+              <InfoCar>
                 <h1>{item.veiculo_marca}</h1>
                 <CarModelName>
                   <p>{item.veiculo_modelo}</p>
                 </CarModelName>
                 <p>{item.veiculo_cambio}</p>
                 <p>{item.ano_modelo}</p>
-                <h4>                  
-                {item.veiculo_valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
+                <h4>
+                  {Number(item.veiculo_valor).toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </h4>
                 <p>{item.veiculo_km} Km</p>
 
                 <div>
-              <FinancingButton>Financiamento</FinancingButton>
-              <ContactsButton>Contatos</ContactsButton>
-              </div>
+                  <FinancingButton>
+                    <Link to="financiamento">Financiamento</Link>
+                  </FinancingButton>
+                  <ContactsButton>
+                    <Link to="contatos">Contatos</Link>
+                  </ContactsButton>
+                </div>
               </InfoCar>
-              
-              
             </Card>
           </div>
         ))}
-       
       </ContainerCards>
       <ContainerButtonCurrentPage>
         {Array.from({ length: Math.ceil(data.length / cardsPerPage) }).map(

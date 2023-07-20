@@ -1,0 +1,97 @@
+.Geral {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.Filters{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Select-quantity{
+  background-color: var(--bg-white);
+  color: var(--button-color);
+  width: 18vw;
+  height: 2vh;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.Position-cards{
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.Vertical-card {
+  background-color: var(--bg-white);
+  border-radius: 1rem;
+  display: grid;
+  width: 45vw;
+  gap: 1rem;
+  justify-items: center;
+  box-shadow: 0.3rem 0.3rem 1rem #aaaaaa;
+  padding: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.Horizontal-card {
+  background-color: var(--bg-white);
+  border-radius: 1rem;
+  display: flex;
+  width: 45vw;
+  gap: 1rem;
+  justify-items: center;
+  box-shadow: 0.3rem 0.3rem 1rem #aaaaaa;
+  padding: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.Elipse{
+  white-space: nowrap; 
+  width: 44vw;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.Photo-card{
+  width: 45vw;
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .Vertical-card,
+  .Select-quantity{
+    font-size: 1.5rem;
+  }
+
+  .Filters{
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Vertical-card, 
+  .Photo-card,
+  .Elipse{
+    width: 30vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .Vertical-card, 
+  .Photo-card,
+  .Elipse{
+    width: 19vw;
+  }
+}

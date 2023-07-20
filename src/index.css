@@ -7,11 +7,23 @@
 :root{
   font-size: 62.5%;
   --button-color: #D9611E;
+  --bg-white: #ffffff;
+  --bg-light-blue: #cdf0ee;
 }
 
 body {
-  background-color: #cdf0ee;
+  background-color: var(--bg-light-blue);
   font-size: 1.6rem;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: CerebriSans-Bold, -apple-system, system-ui, Roboto, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  button{
+    font-size: 1.5rem;
+  }
 }

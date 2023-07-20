@@ -6,13 +6,16 @@
 
 :root{
   font-size: 62.5%;
-  --button-color: #D9611E;
-  --bg-white: #ffffff;
-  --bg-light-blue: #cdf0ee;
+  --orange: #D9611E;
+  --white: #ffffff;
+  --light-pink: #f8e1f9;;
+  --pink: #f12aaf;
+  --dark-pink: #8d1666;
+  --gray: #aaaaaa;
 }
 
 body {
-  background-color: var(--bg-light-blue);
+  background-color: var(--light-pink);
   font-size: 1.6rem;
   font-family: CerebriSans-Bold, -apple-system, system-ui, Roboto, sans-serif;
 }

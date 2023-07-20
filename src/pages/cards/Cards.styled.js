@@ -2,58 +2,40 @@ import styled from "styled-components";
 
 export const ContainerCards = styled.section`
   display: flex;
-  flex-direction: ${(props) => (props.vertical ? "column" : "row")};
-  justify-content: ${(props) => (props.vertical ? "center" : "space-around")};
-  flex-wrap: ${(props) => (props.vertical ? "nowrap" : "wrap")};
+  flex-direction: ${(props) => (props.vertical ? "row" : "column")};
+  justify-content: ${(props) => (props.vertical ? "space-around" : "center")};
+  flex-wrap: ${(props) => (props.vertical ? "wrap" : "nowrap")};
   align-items: center;
-  gap: 0.1rem;
   margin: 0.2rem;
 `;
 
 export const Card = styled.section`
-  width: ${(props) => (props.vertical ? "60rem" : "30rem")};
-  height: ${(props) => (props.vertical ? "30rem" : "60rem")};
-  flex-direction: ${(props) => (props.vertical ? "row" : "column")};
+  width: ${(props) => (props.vertical ? "45vw" : "80vw")};
+  height: ${(props) => (props.vertical ? "25rem" : "15rem")};
+  flex-direction: ${(props) => (props.vertical ? "column" : "row")};
   justify-content: space-between;
   align-items: center;
   background-color: var(--yellow);
   border-radius: 10px;
   display: flex;
-  font-size: 1rem;
-  padding: 0.2rem;
   margin-bottom: 1rem;
 
   img {
-    border-radius: 15px;
-    width: 40vw;
+    width: ${(props) => (props.vertical ? "100%" : "40vw")};
+    height: ${(props) => (props.vertical ? "auto" : "100%")};
+    border-radius: 10px;
   }
 
-  @media (max-width: 380px) {
-    width: ${(props) => (props.vertical ? "19rem" : "15rem")};
-    height: ${(props) => (props.vertical ? "13rem" : "20rem")};
+  @media (min-width: 320px) and (max-width: 380px) {
+    width: ${(props) => (props.vertical ? "70vw" : "90vw")};
+    height: ${(props) => (props.vertical ? "28rem" : "15rem")};
     font-size: 0.8rem;
   }
-
-  @media (min-width: 380px) and (max-width: 400px) {
-    width: ${(props) => (props.vertical ? "20rem" : "13rem")};
-    height: ${(props) => (props.vertical ? "13rem" : "20rem")};
-
-    font-size: 0.9rem;
-  }
-
-  @media (min-width: 400px) and (max-width: 450px) {
-    width: ${(props) => (props.vertical ? "22rem" : "12rem")};
-    height: ${(props) => (props.vertical ? "12rem" : "22rem")};
-
-    font-size: 0.9rem;
-  }
-
-  @media (min-width: 450px) and (max-width: 500px) {
-    width: ${(props) => (props.vertical ? "23rem" : "13rem")};
-    height: ${(props) => (props.vertical ? "13rem" : "23rem")};
-
-    font-size: 0.9rem;
-  }
+`;
+export const Carrossel = styled.div`
+  width: ${(props) => (props.vertical ? "100%" : "40vw")};
+  height: ${(props) => (props.vertical ? "auto" : "100%")};
+ 
 `;
 
 export const InfoCar = styled.section`
@@ -61,10 +43,20 @@ export const InfoCar = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 1.5rem;
-  padding: 0.1rem;
   text-align: center;
-  max-width: 40vw;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  width: ${(props) => (props.vertical ? "100%" : "40vw")};
+`;
+
+export const CarModelName = styled.div`
+  width: ${(props) => (props.vertical ? "100%" : "100%")};
+
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const ContainerButtonCurrentPage = styled.div`
@@ -82,20 +74,11 @@ export const ButtonCurrentPage = styled.button`
   padding: 0.3rem;
 `;
 
-export const CarModelName = styled.div`
-  width: 38vw;
-
-  p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+export const FinancingButton = styled.button`
+  background-color: var(--blue);
+  font-size: 0.6rem;
 `;
-
-export const FinancingButton = styled.button `
-background-color: var(--blue);
-
-  `
-export const ContactsButton = styled.button `
-background-color: var(--blue);
-`
+export const ContactsButton = styled.button`
+  background-color: var(--blue);
+  font-size: 0.6rem;
+`;

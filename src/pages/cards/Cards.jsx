@@ -1,9 +1,18 @@
 import { useState } from "react";
+import { register } from "swiper/element/bundle";
+register();
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import data from "../../data/data.json";
 import {
   ButtonCurrentPage,
   CarModelName,
   Card,
+  Carrossel,
   ContactsButton,
   ContainerButtonCurrentPage,
   ContainerCards,
@@ -52,30 +61,41 @@ const Cards = () => {
         {currentCards.map((item) => (
           <div key={item.id}>
             <Card vertical={verticalLayout}>
-              <>
-                <img src={item.veiculo_foto[0]} alt="" />
-              </>
+              <Carrossel>
+              <Swiper slidesPerView={1}
+              pagination={{clickable: true}}
+              navigation
+              >
+                {item.veiculo_foto.map((img) => (
+                  <SwiperSlide key={img.id}>                   
+                      <img src={img} alt="" />                   
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              </Carrossel>
+
               <InfoCar>
-                <h1>{item.veiculo_marca}</h1>
+                <h2>{item.veiculo_marca}</h2>
                 <CarModelName>
                   <p>{item.veiculo_modelo}</p>
                 </CarModelName>
+                <p>{item.modelo_nome_pai}</p>
                 <p>{item.veiculo_cambio}</p>
                 <p>{item.ano_modelo}</p>
-                <h4>
+                <h3>
                   {Number(item.veiculo_valor).toLocaleString("pt-br", {
                     style: "currency",
                     currency: "BRL",
                   })}
-                </h4>
+                </h3>
                 <p>{item.veiculo_km} Km</p>
 
                 <div>
                   <FinancingButton>
-                    <Link to="financiamento">Financiamento</Link>
+                    <Link to="financiamento">Simular Financiamento</Link>
                   </FinancingButton>
                   <ContactsButton>
-                    <Link to="contatos">Contatos</Link>
+                    <Link to="contatos">Entrar em Contato</Link>
                   </ContactsButton>
                 </div>
               </InfoCar>

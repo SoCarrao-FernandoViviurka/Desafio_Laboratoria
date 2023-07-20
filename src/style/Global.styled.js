@@ -25,12 +25,13 @@ export const GlobalStyle = createGlobalStyle`
 
   button{
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
     text-transform: uppercase;
     border: none;  
     padding: .4rem; 
     color: var(--white);
     background-color: var(--blue);
+    margin: .2rem;
   }
 
   input, select{

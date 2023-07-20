@@ -5,14 +5,28 @@
   justify-content: center;
 }
 
-.Vertical-card {
+.Vertical-card,
+.Horizontal-card{
   background-color: var(--white);
   border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 1rem var(--gray);
+  position: relative;
+}
+
+.Vertical-card {
   display: grid;
   width: 40vw;
-  box-shadow: 0.3rem 0.3rem 1rem var(--gray);
   padding: 0 0 0.5rem 0;
   font-size: 1rem;
+}
+
+.Horizontal-card {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: auto;
+  gap: 1rem;
+  font-size: 1.2rem;
 }
 
 .Vertical-card .Photo-card{
@@ -20,36 +34,28 @@
   border-radius: 1rem 1rem 0 0;
 }
 
-.Vertical-card .City{
+.Horizontal-card .Photo-card{
+  width: 45vw;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.City{
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 0.7rem;
-  color: var(--white);
+  color: var(--light-pink);
   font-weight: 500;
   text-align: center;
   justify-self: end;
-  background: var(--pink);
+  background: var(--dark-pink);
+  border-radius: 1rem 0 0 0;
+  opacity : 0.8;
   padding: 0.3rem;
 }
 
 .Brand{
-  /* display: none; */
   text-align: center;
-}
-
-.Horizontal-card {
-  background-color: var(--white);
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: row;
-  width: 90vw;
-  height: auto;
-  gap: 1rem;
-  box-shadow: 0.3rem 0.3rem 1rem #aaaaaa;
-  font-size: 1.2rem;
-}
-
-.Horizontal-card .Photo-card{
-  width: 45vw;
-  border-radius: 1rem 1rem 0 0;
 }
 
 .Position{
@@ -83,7 +89,7 @@
     font-size: 1.8rem;
   }
 
-  .Vertical-card .City{
+  .City{
     font-size: 1.2rem;
   }
 

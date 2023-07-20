@@ -1,4 +1,3 @@
-import './Pagination.css';
 import Button from '../Button/Button';
 
 const Pagination = ({

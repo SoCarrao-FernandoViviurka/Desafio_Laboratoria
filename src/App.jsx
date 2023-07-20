@@ -30,8 +30,6 @@ const App = () => {
       return letter[0].toUpperCase() + letter.substring(1);
     });
     const removeRepeats = new Set(capitalFirstLetter);
-    // console.log(removeRepeats);
-    //console.log((Array.from(removeRepeats).join(' ')).length)
     const transformToString = Array.from(removeRepeats).join(' ');    
     return transformToString;
   }
@@ -45,7 +43,7 @@ const App = () => {
             <option key={value} value={value}>{`${value} por página`}</option>
           ))}
         </select>
-        <Button className='Bg-orange' onClick={handleClickLayoutChange} children={isCardVertical ? 'Horizontal' : 'Vertical'}/>
+        <Button className='Btn-layout' onClick={handleClickLayoutChange} children={isCardVertical ? 'Horizontal' : 'Vertical'}/>
       </section>
       <Card 
         isCardVertical={isCardVertical}

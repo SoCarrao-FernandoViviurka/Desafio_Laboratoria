@@ -3,6 +3,7 @@ import { React, useEffect, useState } from "react";
 import data from './data/data.json';
 import Button from './Components/Button/Button';
 import Card from './Components/Card/Card';
+import Pagination from './Components/Pagination/Pagination';
 
 const App = () => {
   const [cardPerPage, setCardPerPage] = useState(5);
@@ -51,11 +52,11 @@ const App = () => {
         vehicles={currentCard}
         modelFormatting={modelFormatting}
       />
-      <section>
-        {Array.from(Array(numberOfPages), (_, i) => {
-          return <Button className='Button-pages' key={i} value={i} onClick={(e) => setCurrentPage(Number(e.target.value))} children={i+1} />
-        })}
-      </section>
+      <Pagination 
+        numberOfPages={numberOfPages}
+        currentPage={currentPage}
+        onClickCurrentPage={(e) => setCurrentPage(Number(e.target.value))}
+      />
     </main>
   );
 }

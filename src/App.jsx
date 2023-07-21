@@ -22,20 +22,60 @@ const App = () => {
   const handleClickLayoutChange = () => {
     setIsCardVertical(!isCardVertical);
   }
+/* 
+  const modelFormatting = (vehicleModel, vehicleDadModel) => {
+    const vehicle = vehicleModel.replace(vehicleDadModel, '');
+    console.log(vehicle);
+    return vehicle[0].toUpperCase() + vehicle.substring(1).toLowerCase();
+  } */
+
+ /*  const modelFormatting = (model, version) => {
+    const lowerCaseModel = model.toLowerCase();
+    const lowerCaseVersion = version.toLowerCase();
+    const separateModel = lowerCaseModel.split(' ');
+    const separateVersion = lowerCaseVersion.split(' ');
+    const words = [...separateModel, separateVersion]
+    console.log('words', words)
+    const newModel = [];
+    separateModel.forEach((letterModel) => {
+      separateVersion.forEach((letterVersion) => {
+        console.log('LM', letterModel)
+        console.log('LV', letterVersion)
+        if(letterModel !== letterVersion){
+          console.log(letterModel, 'e', letterVersion)
+          newModel.push(letterModel);
+        }
+      });
+    });
+    console.log(newModel);
+    const capitalFirstLetter = newModel.map((letter) => {
+      return letter[0].toUpperCase() + letter.substring(1);
+    });
+    const removeRepeats = new Set(capitalFirstLetter);
+    const transformToString = Array.from(removeRepeats).join(' ');    
+    return transformToString;
+  } */
+ 
   
   const modelFormatting = (model, version) => {
     const lowerCaseModel = model.toLowerCase();
     const lowerCaseVersion = version.toLowerCase();
     const separateModel = lowerCaseModel.split(' ');
     const separateVersion = lowerCaseVersion.split(' ');
+    const words = [...separateModel, separateVersion]
+    console.log('words', words)
     const newModel = [];
     separateModel.forEach((letterModel) => {
       separateVersion.forEach((letterVersion) => {
+        console.log('LM', letterModel)
+        console.log('LV', letterVersion)
         if(letterModel !== letterVersion){
+          console.log(letterModel, 'e', letterVersion)
           newModel.push(letterModel);
         }
       });
     });
+    console.log(newModel);
     const capitalFirstLetter = newModel.map((letter) => {
       return letter[0].toUpperCase() + letter.substring(1);
     });
@@ -43,7 +83,7 @@ const App = () => {
     const transformToString = Array.from(removeRepeats).join(' ');    
     return transformToString;
   }
-
+ 
   return (
     <main className='Geral'>
       <section className='Filters'>

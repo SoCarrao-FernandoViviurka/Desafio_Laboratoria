@@ -17,7 +17,7 @@
   display: grid;
   width: 40vw;
   padding: 0 0 0.5rem 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .Horizontal-card {
@@ -71,7 +71,6 @@
 
 .Elipse{
   white-space: nowrap; 
-  /* width: 36vw; */
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -102,11 +101,7 @@
   .Vertical-card,
   .Vertical-card .Photo-card,
   .Vertical-card .Position{
-    width: 30vw;
-  }
-
-  .Vertical-card .Elipse{
-    width: 28vw;
+    width: 22vw;
   }
 
   .Horizontal-card{
@@ -184,5 +179,4 @@
   .Horizontal-card .Position{
     grid-auto-columns: 21vw 15vw;
   }
-  
 }

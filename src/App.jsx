@@ -23,10 +23,20 @@ const App = () => {
     setIsCardVertical(!isCardVertical);
   }
   
-  const modelFormatting = (model) => {
-    const lowercase = model.toLowerCase();
-    const separateString = lowercase.split(' ');
-    const capitalFirstLetter = separateString.map((letter) => {
+  const modelFormatting = (model, version) => {
+    const lowerCaseModel = model.toLowerCase();
+    const lowerCaseVersion = version.toLowerCase();
+    const separateModel = lowerCaseModel.split(' ');
+    const separateVersion = lowerCaseVersion.split(' ');
+    const newModel = [];
+    separateModel.forEach((letterModel) => {
+      separateVersion.forEach((letterVersion) => {
+        if(letterModel !== letterVersion){
+          newModel.push(letterModel);
+        }
+      });
+    });
+    const capitalFirstLetter = newModel.map((letter) => {
       return letter[0].toUpperCase() + letter.substring(1);
     });
     const removeRepeats = new Set(capitalFirstLetter);

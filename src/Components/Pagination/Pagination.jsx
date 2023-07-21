@@ -5,7 +5,6 @@ const Pagination = ({
   currentPage,
   onClickCurrentPage,
 }) => {
-  console.log(currentPage);
   return (
     <section>
       {Array.from(Array(numberOfPages), (_, i) => (

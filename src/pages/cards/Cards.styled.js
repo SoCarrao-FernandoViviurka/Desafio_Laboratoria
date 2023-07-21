@@ -101,7 +101,7 @@ export const ButtonCurrentPage = styled.button`
   width: 1.2rem;
   height: 0.2rem;
   font-weight: bold;
-  padding: .5rem;
+  padding: .8rem;
   font-size: .5rem;
   display: flex;
   align-items: center;

@@ -50,10 +50,12 @@ const Cards = () => {
       const validBrand = !brand || carro.veiculo_marca === brand;
       const validModel = !model || carro.modelo_nome_pai === model;
       const validExchange = !exchange || carro.veiculo_cambio === exchange;
-      const validYear = !year || carro.ano_fabricacao === parseInt(year);
-
+      const validYear = !year || carro.ano_fabricacao === parseInt(year)     
+  
       return validBrand && validModel && validExchange && validYear;
   });
+
+
 
   const indexOfLastCard = currentPage * cardsPerPage; // ultimo
   const indexOfFirstCard = indexOfLastCard - cardsPerPage; // primeiro
@@ -65,8 +67,8 @@ const Cards = () => {
   const uniqueBrand = Array.from(new Set(data.map((carro) => carro.veiculo_marca)));
   const uniqueModel = Array.from(new Set(data.map((carro) => carro.modelo_nome_pai)));
   const uniqueExchange = Array.from(new Set(data.map((carro) => carro.veiculo_cambio)));
-  const uniqueYear = Array.from(new Set(data.map((carro) => carro.ano_fabricacao))
-  );
+  const uniqueYear = Array.from(new Set(data.map((carro) => carro.ano_fabricacao)));
+  uniqueYear.sort();
 
   const clearFilter = () => {
     setBrand("");
@@ -148,7 +150,7 @@ const Cards = () => {
             <select value={year} onChange={(e) => setYear(e.target.value)}>
               <option value="">Todos</option>
               {uniqueYear.map((year) => (
-                <option key={year} value={year}>
+                <option key={year}value={year}>
                   {year}
                 </option>
               ))}

@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: var(--black);
+      background-color: var(--darkBlue);
       
     }
 
@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--white);
     background-color: var(--blue);
     margin: .2rem;
+    text-align: center;
   }
 
   input, select{
@@ -44,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     --blue: #054F77;
     --white: #fff;
     --black: #131819;
+    --darkBlue: #011425;
     
   }
  `;

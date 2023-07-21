@@ -7,6 +7,7 @@ export const ContainerCards = styled.section`
   flex-wrap: ${(props) => (props.vertical ? "wrap" : "nowrap")};
   align-items: center;
   margin: 0.2rem;
+  margin-top: 2rem;
 `;
 
 export const Card = styled.section`
@@ -15,27 +16,23 @@ export const Card = styled.section`
   flex-direction: ${(props) => (props.vertical ? "column" : "row")};
   justify-content: space-between;
   align-items: center;
-  background-color: var(--yellow);
+  background-color: var(--white);
   border-radius: 10px;
   display: flex;
   margin-bottom: 1rem;
+`;
+
+export const Carrossel = styled.div`
+  display: flex;
+  justify-content: center;
+  width: ${(props) => (props.vertical ? "100%" : "40vw")};
+  height: 100%;
 
   img {
     width: ${(props) => (props.vertical ? "100%" : "40vw")};
-    height: ${(props) => (props.vertical ? "auto" : "100%")};
+    height: 100%;
     border-radius: 10px;
   }
-
-  @media (min-width: 320px) and (max-width: 380px) {
-    width: ${(props) => (props.vertical ? "70vw" : "90vw")};
-    height: ${(props) => (props.vertical ? "28rem" : "15rem")};
-    font-size: 0.8rem;
-  }
-`;
-export const Carrossel = styled.div`
-  width: ${(props) => (props.vertical ? "100%" : "40vw")};
-  height: ${(props) => (props.vertical ? "auto" : "100%")};
- 
 `;
 
 export const InfoCar = styled.section`
@@ -79,6 +76,8 @@ export const FinancingButton = styled.button`
   font-size: 0.6rem;
 `;
 export const ContactsButton = styled.button`
-  background-color: var(--blue);
+  background-color: transparent;
+  border: .1rem solid var(--darkBlue);
   font-size: 0.6rem;
+  color: var(--darkBlue)
 `;

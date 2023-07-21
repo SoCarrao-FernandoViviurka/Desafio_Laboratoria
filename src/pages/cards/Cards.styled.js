@@ -20,6 +20,16 @@ export const Card = styled.section`
   border-radius: 10px;
   display: flex;
   margin-bottom: 1rem;
+
+  @media (min-width: 700px) {
+    width: ${(props) => (props.vertical ? "20rem" : "40rem")};
+    height: ${(props) => (props.vertical ? "40rem" : "20rem")};
+  }
+
+  @media (min-width: 1200px) {
+    width: ${(props) => (props.vertical ? "40rem" : "80vw")};
+    height: ${(props) => (props.vertical ? "60rem" : "30rem")};
+  }
 `;
 
 export const Carrossel = styled.div`
@@ -27,6 +37,22 @@ export const Carrossel = styled.div`
   justify-content: center;
   width: ${(props) => (props.vertical ? "100%" : "40vw")};
   height: 100%;
+
+  @media (min-width: 700px) {
+    width: ${(props) => (props.vertical ? "100%" : "20rem")};
+    /* height: ${(props) => (props.vertical ? "80px" : "25rem")}; */
+
+    img {
+      width: ${(props) => (props.vertical ? "100%" : "20rem")};
+      height: ${(props) => (props.vertical ? "30%" : "25rem")};
+      
+    }
+
+    @media (min-width: 1200px) {
+    width: ${(props) => (props.vertical ? "100vw" : "30vw")};
+    height: ${(props) => (props.vertical ? "60rem" : "30rem")};
+  }
+  }
 
   img {
     width: ${(props) => (props.vertical ? "100%" : "40vw")};
@@ -44,6 +70,13 @@ export const InfoCar = styled.section`
   font-size: 0.9rem;
   padding: 0.2rem;
   width: ${(props) => (props.vertical ? "100%" : "40vw")};
+
+  
+  @media (min-width: 1200px) {
+    width: ${(props) => (props.vertical ? "100vw" : "30vw")};
+    height: ${(props) => (props.vertical ? "60rem" : "30rem")};
+    font-size: 1.2rem;
+  }
 `;
 
 export const CarModelName = styled.div`
@@ -66,18 +99,84 @@ export const ContainerButtonCurrentPage = styled.div`
 
 export const ButtonCurrentPage = styled.button`
   width: 1.2rem;
-  height: 1%.2rem;
+  height: 0.2rem;
   font-weight: bold;
-  padding: 0.3rem;
+  padding: .5rem;
+  font-size: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 600px) {
+    padding: .8rem;
+    font-size: .8rem;
+    
+  }
+
 `;
 
 export const FinancingButton = styled.button`
   background-color: var(--blue);
   font-size: 0.6rem;
+
+  @media (min-width: 700px) {
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 1rem;
+    margin: .5rem;
+    font-size: 0.8rem;
+  }
+
+
 `;
 export const ContactsButton = styled.button`
   background-color: transparent;
-  border: .1rem solid var(--darkBlue);
+  border: 0.1rem solid var(--darkBlue);
   font-size: 0.6rem;
-  color: var(--darkBlue)
+  color: var(--darkBlue);
+
+  @media (min-width: 700px) {
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 1rem;
+    margin: .5rem;
+    font-size: 0.8rem;
+  }
+`;
+
+export const Filter = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--white);
+  flex-direction: column;
+  padding: 1rem;
+
+  select {
+    padding: 0.1px;
+    line-height: 0.1rem;
+
+    @media (min-width: 1200px) {
+    font-size: 1.4rem;    
+  }
+  }
+
+  div {
+    padding: 0.2rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 1.4rem;    
+  }
+
+  button{
+    @media (min-width: 1200px) {
+    font-size: 1rem;  
+    padding: .5rem;  
+  }
+  }
 `;

@@ -27,18 +27,21 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border-radius: 5px;
     text-transform: uppercase;
+    font-size: .7rem;
     border: none;  
-    padding: .4rem; 
+    padding: .2rem; 
     color: var(--white);
     background-color: var(--blue);
     margin: .2rem;
     text-align: center;
   }
 
-  input, select{
+  select{
     border-radius: 10px;
     border: none;
   }
+
+ 
 
   :root{
     --yellow: #ffff01;

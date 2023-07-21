@@ -9,7 +9,7 @@ const Header = () => {
 		<GrMenu size={30} />
 		</Icone>
 		
-		<img src={logo} alt="" />
+		<img src={logo} alt="logo da sócarrão" />
 	</HeaderContainer>
   )
 }

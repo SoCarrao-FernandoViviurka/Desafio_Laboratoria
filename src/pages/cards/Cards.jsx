@@ -55,15 +55,11 @@ const Cards = () => {
       return validBrand && validModel && validExchange && validYear;
   });
 
-
-
-  const indexOfLastCard = currentPage * cardsPerPage; // ultimo
-  const indexOfFirstCard = indexOfLastCard - cardsPerPage; // primeiro
+  const indexOfLastCard = currentPage * cardsPerPage; 
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage; 
   const currentCards = carrosFiltrados.slice(indexOfFirstCard, indexOfLastCard);
   console.log(currentCards);
 
-
-  // Obtém as opções únicas de marca e modelo para preencher os selects
   const uniqueBrand = Array.from(new Set(data.map((carro) => carro.veiculo_marca)));
   const uniqueModel = Array.from(new Set(data.map((carro) => carro.modelo_nome_pai)));
   const uniqueExchange = Array.from(new Set(data.map((carro) => carro.veiculo_cambio)));
@@ -71,6 +67,7 @@ const Cards = () => {
   uniqueYear.sort();
 
   const clearFilter = () => {
+    setCardsPerPage("")
     setBrand("");
     setModel("");
     setExchange("");
@@ -176,7 +173,7 @@ const Cards = () => {
                 >
                   {item.veiculo_foto.map((img) => (
                     <SwiperSlide key={img.id}>
-                      <img src={img} alt="" />
+                      <img src={img} alt="fotos dos carros" />
                     </SwiperSlide>
                   ))}
                 </Swiper>

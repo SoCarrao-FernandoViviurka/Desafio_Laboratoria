@@ -21,7 +21,7 @@ O SóCarrão cuida das pessoas;
 
 Desafio SóCarrão.com em parceria com Laboratoria!
 ___
-### Regras ###
+## Regras
 
 A SóCarrão.com é um portal de anúncios de veículos ( Carros, motos, caminhões, barcos e etc... ) e aproximadamente 90% dos usuários que acessam o nosso site, acessam via celular. Toda vez que iniciamos o desenvolvimento de uma feature, de uma tela, de algo novo, sempre começamos pelo mobile, o que faz com que sejamos uma empresa Mobile First.
 
@@ -59,6 +59,8 @@ Quando escondida a marca por falta de espaço no card e ainda assim faltar espa�
 [ &#10004; ] Um outro ponto muito importante: queremos que os cards sejam apresentados paginados, deixando o usuário definir quantos ele quer ver por página. O padrão deve ser 5 cards por página.  
 
 [ &#10004; ] UM SUPER DIFERENCIAL, mas não obrigatório, temos também um modelo de CARD na versão DESKTOP, se sentirem confortáveis, fiquem a vontade para fazer!
+
+
 
 
 

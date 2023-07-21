@@ -1,12 +1,12 @@
 import logo from "../assets/logo2.png"
 import { HeaderContainer, Icone } from "./Header.styled"
-import { ImMenu } from "react-icons/im"
+import { GrMenu } from "react-icons/gr"
 
 const Header = () => {
   return (
 	<HeaderContainer>
 		<Icone>
-		<ImMenu size={30} />
+		<GrMenu size={30} />
 		</Icone>
 		
 		<img src={logo} alt="" />

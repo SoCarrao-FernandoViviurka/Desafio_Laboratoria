@@ -85,7 +85,7 @@ const Cards = () => {
           <button onClick={toggleLayout}>{buttonText}</button>
           <div>
           <label>
-            <span>Cards por página</span>
+            <span>Cards por página: </span>
             <select
               value={cardsPerPage}
               onChange={(e) => setCardsPerPage(e.target.value)}
@@ -108,7 +108,7 @@ const Cards = () => {
               <option value="">Todas</option>
               {uniqueBrand.map((brand) => (
                 <option key={brand} value={brand}>
-                  {brand}
+                  { brand}
                 </option>
               ))}
             </select>

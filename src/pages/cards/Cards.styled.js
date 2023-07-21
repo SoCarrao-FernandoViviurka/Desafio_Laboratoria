@@ -161,7 +161,7 @@ export const Filter = styled.div`
     line-height: 0.1rem;
 
     @media (min-width: 1200px) {
-    font-size: 1.4rem;    
+    font-size: 1.1rem;    
   }
   }
 
@@ -170,13 +170,13 @@ export const Filter = styled.div`
   }
 
   @media (min-width: 1200px) {
-    font-size: 1.4rem;    
+    font-size: 1.1rem;    
   }
 
   button{
     @media (min-width: 1200px) {
-    font-size: 1rem;  
-    padding: .5rem;  
+    font-size: .8rem;  
+    padding: .4rem;  
   }
   }
 `;

@@ -19,6 +19,7 @@ import {
   Filter,
   FinancingButton,
   InfoCar,
+  MainCards,
 } from "./Cards.styled";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
@@ -28,8 +29,8 @@ import { CiGrid2H } from "react-icons/ci";
 
 const Cards = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(6);
-  const [options] = useState([6,10, 20, 30, 50]);
+  const [cardsPerPage, setCardsPerPage] = useState(4);
+  const [options] = useState([4 ,8, 16, 32, 50]);
   const [verticalLayout, setVerticalLayout] = useState(true);
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
@@ -76,6 +77,7 @@ const Cards = () => {
   return (
     <div>
       <Header />
+      <MainCards>
       <Filter>
         <div>
           <button onClick={toggleLayout}>{buttonText}</button>
@@ -225,6 +227,7 @@ const Cards = () => {
           )
         )}
       </ContainerButtonCurrentPage>
+      </MainCards>
     </div>
   );
 };

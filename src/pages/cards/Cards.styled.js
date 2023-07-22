@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const MainCards = styled.main`
+  background-color: var(--darkBlue);
+  @media (min-width: 1000px) {
+    margin: auto;
+    width: 70%;
+  }
+`;
+
 export const ContainerCards = styled.section`
   display: flex;
   flex-direction: ${(props) => (props.vertical ? "row" : "column")};
@@ -25,7 +33,6 @@ export const Card = styled.section`
     width: ${(props) => (props.vertical ? "20rem" : "40rem")};
     height: ${(props) => (props.vertical ? "40rem" : "20rem")};
   }
-
 `;
 
 export const Carrossel = styled.div`
@@ -34,16 +41,19 @@ export const Carrossel = styled.div`
   width: ${(props) => (props.vertical ? "40vw" : "40vw")};
   height: 100%;
 
-  @media (min-width: 700px) {
-    width: ${(props) => (props.vertical ? "100%" : "20rem")};
-    height: ${(props) => (props.vertical ? "80px" : "20rem")};
-
-  }
-
   img {
     width: ${(props) => (props.vertical ? "40vw" : "40vw")};
     height: 100%;
-   
+  }
+
+  @media (min-width: 700px) {
+    width: ${(props) => (props.vertical ? "20px" : "320px")};
+    height: ${(props) => (props.vertical ? "50px" : "20rem")};
+
+    img {
+      width: ${(props) => (props.vertical ? "20px" : "320px")};
+      height: ${(props) => (props.vertical ? "50px" : "20rem")};
+    }
   }
 `;
 
@@ -57,11 +67,10 @@ export const InfoCar = styled.section`
   padding: 0.2rem;
   width: ${(props) => (props.vertical ? "100%" : "40vw")};
 
-  
-  @media (min-width: 1200px) {
+  @media (min-width: 700px) {
     width: ${(props) => (props.vertical ? "100vw" : "30vw")};
     height: ${(props) => (props.vertical ? "60rem" : "30rem")};
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 
@@ -87,28 +96,25 @@ export const ButtonCurrentPage = styled.button`
   width: 1.2rem;
   height: 0.2rem;
   font-weight: bold;
-  padding: .8rem;
-  font-size: .5rem;
+  padding: 0.8rem;
+  font-size: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (min-width: 600px) {
-    padding: .8rem;
-    font-size: .8rem;
-    
+    padding: 0.8rem;
+    font-size: 0.8rem;
   }
-
 `;
 
 export const FinancingButton = styled.button`
   background-color: var(--blue);
- font-size: 0.6rem;
+  font-size: 0.6rem;
 
   @media (min-width: 700px) {
     padding: 0.5rem;
   }
-
 `;
 export const ContactsButton = styled.button`
   background-color: transparent;
@@ -119,8 +125,6 @@ export const ContactsButton = styled.button`
   @media (min-width: 700px) {
     padding: 0.5rem;
   }
-
-
 `;
 
 export const Filter = styled.div`
@@ -139,6 +143,4 @@ export const Filter = styled.div`
   div {
     padding: 0.2rem;
   }
-
-
 `;

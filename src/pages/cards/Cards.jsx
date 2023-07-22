@@ -29,8 +29,8 @@ import { CiGrid2H } from "react-icons/ci";
 
 const Cards = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(4);
-  const [options] = useState([4 ,8, 16, 32, 50]);
+  const [cardsPerPage, setCardsPerPage] = useState(6);
+  const [options] = useState([6 ,12, 18, 32, 50]);
   const [verticalLayout, setVerticalLayout] = useState(true);
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");

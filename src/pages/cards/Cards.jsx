@@ -67,7 +67,6 @@ const Cards = () => {
   uniqueYear.sort();
 
   const clearFilter = () => {
-    setCardsPerPage("")
     setBrand("");
     setModel("");
     setExchange("");
@@ -189,18 +188,18 @@ const Cards = () => {
                 <p>
                   {item.ano_fabricacao}/{item.ano_modelo}
                 </p>
+                               <p>{Number(item.veiculo_km).toLocaleString()} Km</p>
+                <p>
+                  {" "}
+                  <SiGooglemaps />
+                  {item.veiculo_cidade}
+                </p>
                 <h3>
                   {Number(item.veiculo_valor).toLocaleString("pt-br", {
                     style: "currency",
                     currency: "BRL",
                   })}
                 </h3>
-                <p>{Number(item.veiculo_km).toLocaleString()} Km</p>
-                <p>
-                  {" "}
-                  <SiGooglemaps />
-                  {item.veiculo_cidade}
-                </p>
                 <div>
                   <FinancingButton>
                     <Link to="financiamento">Simular Financiamento</Link>

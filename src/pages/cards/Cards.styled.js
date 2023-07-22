@@ -11,7 +11,7 @@ export const ContainerCards = styled.section`
 `;
 
 export const Card = styled.section`
-  width: ${(props) => (props.vertical ? "45vw" : "80vw")};
+  width: ${(props) => (props.vertical ? "40vw" : "80vw")};
   height: ${(props) => (props.vertical ? "25rem" : "15rem")};
   flex-direction: ${(props) => (props.vertical ? "column" : "row")};
   justify-content: space-between;
@@ -26,38 +26,24 @@ export const Card = styled.section`
     height: ${(props) => (props.vertical ? "40rem" : "20rem")};
   }
 
-  @media (min-width: 1200px) {
-    width: ${(props) => (props.vertical ? "40rem" : "80vw")};
-    height: ${(props) => (props.vertical ? "60rem" : "30rem")};
-  }
 `;
 
 export const Carrossel = styled.div`
   display: flex;
   justify-content: center;
-  width: ${(props) => (props.vertical ? "100%" : "40vw")};
+  width: ${(props) => (props.vertical ? "40vw" : "40vw")};
   height: 100%;
 
   @media (min-width: 700px) {
     width: ${(props) => (props.vertical ? "100%" : "20rem")};
-    /* height: ${(props) => (props.vertical ? "80px" : "25rem")}; */
+    height: ${(props) => (props.vertical ? "80px" : "20rem")};
 
-    img {
-      width: ${(props) => (props.vertical ? "100%" : "20rem")};
-      height: ${(props) => (props.vertical ? "30%" : "25rem")};
-      
-    }
-
-    @media (min-width: 1200px) {
-    width: ${(props) => (props.vertical ? "100vw" : "30vw")};
-    height: ${(props) => (props.vertical ? "60rem" : "30rem")};
-  }
   }
 
   img {
-    width: ${(props) => (props.vertical ? "100%" : "40vw")};
+    width: ${(props) => (props.vertical ? "40vw" : "40vw")};
     height: 100%;
-    border-radius: 10px;
+   
   }
 `;
 
@@ -117,18 +103,11 @@ export const ButtonCurrentPage = styled.button`
 
 export const FinancingButton = styled.button`
   background-color: var(--blue);
-  font-size: 0.6rem;
+ font-size: 0.6rem;
 
   @media (min-width: 700px) {
     padding: 0.5rem;
   }
-
-  @media (min-width: 1200px) {
-    padding: 1rem;
-    margin: .5rem;
-    font-size: 0.8rem;
-  }
-
 
 `;
 export const ContactsButton = styled.button`
@@ -141,11 +120,7 @@ export const ContactsButton = styled.button`
     padding: 0.5rem;
   }
 
-  @media (min-width: 1200px) {
-    padding: 1rem;
-    margin: .5rem;
-    font-size: 0.8rem;
-  }
+
 `;
 
 export const Filter = styled.div`
@@ -159,24 +134,11 @@ export const Filter = styled.div`
   select {
     padding: 0.1px;
     line-height: 0.1rem;
-
-    @media (min-width: 1200px) {
-    font-size: 1.1rem;    
-  }
   }
 
   div {
     padding: 0.2rem;
   }
 
-  @media (min-width: 1200px) {
-    font-size: 1.1rem;    
-  }
 
-  button{
-    @media (min-width: 1200px) {
-    font-size: .8rem;  
-    padding: .4rem;  
-  }
-  }
 `;

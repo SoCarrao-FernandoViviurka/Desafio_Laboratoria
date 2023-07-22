@@ -101,6 +101,10 @@ export const ButtonCurrentPage = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${props => props.active ? "var(--blue)" : "var(--white)"};
+  color: ${props => props.active ? "white" : "black"};
+
+
 
   @media (min-width: 600px) {
     padding: 0.8rem;

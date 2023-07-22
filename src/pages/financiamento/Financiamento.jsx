@@ -12,6 +12,7 @@ const Financiamento = () => {
     margin: auto;
     color: var(--white);
     height: 100vh;
+    background-color: var(--darkBlue);
     
     button{
       margin: 2rem;
